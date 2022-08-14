@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
+    <style type ="text/css">
+
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    /*font-family: serif;*/
+    font-family: Seravek, Arial, sans-serif;
+    /*font-family: system-ui, sans-serif;*/
+    font-size: 16px;
+    line-height: 1.4em;
+    padding: 25px 25px 150px 25px;
+    margin: auto;
+    max-width: 42em;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color:#bbb;
+        background:#18252c;
+    }
+}
+@media (prefers-color-scheme: light) {
+    body {
+        color:#444;
+        background:#fefefe;
+    }
+}
+
+
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover, a:active {
+    outline: 0;
+}
+a:active {
+    color:#faa700;
+}
+@media (prefers-color-scheme: dark) {
+    a:hover {
+        color: #48d;
+    }
+}
+@media (prefers-color-scheme: light) {
+    a:hover {
+        color: #06e;
+    }
+}
+
+::-moz-selection{
+    background:rgba(255,255,0,0.3);
+    color:#000
+}
+::selection{
+    background:rgba(255,255,0,0.3);
+    color:#000
+}
+
+a::-moz-selection{
+    background:rgba(255,255,0,0.3);
+    color:#0645ad
+}
+a::selection{
+    background:rgba(255,255,0,0.3);
+    color:#0645ad
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+img {
+    max-width:100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /*font-family: Georgia, serif;*/
+    /*font-family: system-ui, sans-serif;*/
+    font-family: Seravek, Ubuntu, serif;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 3em 0 0.5em 0;
+    /*text-transform: capitalize;*/
+}
+
+@media (prefers-color-scheme: dark) {
+    h1, h2, h3, h4, h5, h6 {
+        color:#79c;
+    }
+}
+@media (prefers-color-scheme: light) {
+    h1, h2, h3, h4, h5, h6 {
+        color:#357;
+    }
+}
+h4, h5 {
+    font-weight: bold;
+}
+h1 {
+    font-size:2.5em;
+    /*border-width: 3px 0 3px 0;
+    padding: 5px 0 5px 0px;
+    border-style: solid;*/
+    margin-top: 25px;
+}
+@media (prefers-color-scheme: dark) {
+    h1 {
+        border-color: #7ad;
+    }
+}
+@media (prefers-color-scheme: light) {
+    h1 {
+        border-color: #246;
+    }
+}
+h2 {
+    font-size: 2em;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+@media (prefers-color-scheme: dark) {
+    h2 {
+        border-color: #357;
+    }
+}
+@media (prefers-color-scheme: light) {
+    h2 {
+        border-color: #cde;
+    }
+}
+h3 {
+    margin-top: 20px;
+    font-size:1.6em;
+}
+h4 {
+    font-size:1.2em;
+}
+h5 {
+    font-size:1em;
+}
+h6 {
+    font-size:1em;
+}
+
+blockquote {
+    color:#666666;
+    margin:0;
+    padding-left: 3em;
+    border-left: 0.5em #EEE solid;
+}
+
+@font-face {
+font-family: 'PragmataPro';
+src: url('file:/Users/simon/Library/Fonts/PragmataProR_0829.ttf') format("truetype"),
+     url('file:/Users/simon/Library/Fonts/PragmataProB_0829.ttf') format("truetype"),
+     url('file:/Users/simon/Library/Fonts/PragmataProI_0829.ttf') format("truetype"),
+     url('file:/Users/simon/Library/Fonts/PragmataProZ_0829.ttf') format("truetype");
+}
+
+@font-face {
+font-family: 'Ubuntu';
+src: url('https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72nU6AFw.woff2') format("woff2"),
+     url('https://fonts.gstatic.com/s/ubuntu/v20/4iCu6KVjbNBYlgoKej70l0miFYxn.woff2') format("woff2");
+     url('https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoC1CzjsGyNPYZvgw.woff2') format("woff2");
+     url('https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jsGyNPYZvgw.woff2') format("woff2");
+     url('https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjsGyNPYZvgw.woff2') format("woff2");
+}
+
+
+hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #eee;
+    margin: 1em 0;
+    padding: 0;
+}
+pre, code, kbd, samp {
+    /*font-family: 'PragmataPro', monospace;*/
+    font-family: Menlo, Ubuntu, monospace;
+    font-size: 0.80em;
+    border-radius: 2px;
+    text-transform: none;
+    border-style: solid;
+    border-width: 0.5px;
+    line-height: inherit;
+}
+code {
+    padding: 1px 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+    code {
+        background-color: #345;
+    }
+}
+@media (prefers-color-scheme: light) {
+    code {
+        background-color: rgb(240,240,240);
+    }
+}
+pre {
+    white-space: pre;
+    overflow: scroll;
+    padding: 2px 5px;
+}
+pre > code {
+    border-style: none;
+    padding: 0px 0px 0px 0px;
+    line-height:1.6em;
+    font-size: 0.95em;
+}
+@media (prefers-color-scheme: dark) {
+    pre, code {
+        border-color: #456;
+        background-color: #234;
+    }
+    pre > code {
+        color: #cde;
+    }
+}
+@media (prefers-color-scheme: light) {
+    pre, code {
+        border-color: #bcd;
+        background-color: #f2f8ff;
+    }
+    pre > code {
+        color: #347
+    }
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+ul, ol {
+    padding: 0 0 0 2em;
+}
+li p:last-child {
+    margin:0;
+}
+dd {
+    margin: 0 0 0 2em;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+th {
+    border-bottom: 1px solid black;
+}
+td {
+    vertical-align: top;
+}
+
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        filter:none !important;
+        -ms-filter: none !important;
+    }
+    body {
+        font-size: 8.5pt;
+        max-width: 80%;
+        line-height: 1.3em;
+    }
+    a, a:visited {
+        text-decoration: underline;
+    }
+    hr {
+        height: 1px;
+        border: 0;
+        border-bottom: 1px solid black;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+    pre, blockquote {
+        border: 1px solid #999;
+        padding-right: 1em;
+        page-break-inside: avoid;
+    }
+    tr, img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    @page :left {
+        margin: 15mm 20mm 15mm 10mm;
+    }
+    @page :right {
+        margin: 15mm 10mm 15mm 20mm;
+    }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}
+
+    </style>
+</head>
+<h1>Simon Skorokhodov</h1>
+<p><a href="mailto:skorohodovsemen@gmail.com">E-mail</a> <a href="https://www.linkedin.com/in/simon-skorokhodov/">LinkedIn</a> <a href="https://github.com/sskorokhodov">GitHub</a></p>
+<p>Software developer with more than ten years of experience. I focus on the
+backend but don’t hesitate to work with UI or low-level projects.</p>
+<h2>Skills</h2>
+<h3>Programming Languages</h3>
+<p>Clojure, Erlang, Java, and C++.</p>
+<p>I also have some experience with ClojureScript, Rust, Go, Python, SQL, Bash,
+Prolog, Swift.</p>
+<h3>Technologies and Frameworks</h3>
+<p><strong>Clojure</strong>: core.async, Datomic, ring/http-kit, re-frame.</p>
+<p><strong>Erlang</strong>: rebar, relx, cowboy, gproc, lager, RabbitMQ, Erlang ports, mnesia.</p>
+<p><strong>Java</strong>: Akka, Google Guice, OSGi (Apache Felix), JMX, Maven, RabbitMQ,
+ZooKeeper.</p>
+<p><strong>C++</strong>: STL, WinAPI, MFC, Boost (some bits), ICU.</p>
+<p><strong>Rust</strong>: async-std, rustls.</p>
+<p><strong>Other</strong>: Linux, Docker, Earthly, OIDC, KeyCloak, ESP-32, Protocol Buffers,
+Zipkin, Nginx, React Native.</p>
+<h3>Soft Skills</h3>
+<p>For the first seven years, I worked in teams of 5-9 people. Most recently I
+worked single or in teams of 2-3.</p>
+<p>I use agile tools like short iterations and regular meetings when appropriate.</p>
+<p>While working at SUPREMATIC I supervised a bachelor thesis “Web application as a
+homogeneous component of a distributed system” and a master’s degree work
+“Implementation and evaluation of a message-oriented middleware for distributed
+applications.”</p>
+<h2>Professional Experience</h2>
+<h3>2016 - present</h3>
+<p><em>Software developer, SUPREMATIC Technology Arts GmbH</em></p>
+<ul>
+<li>CDN on-premise for internal software updates distribution (~70k users, Rust,
+Earthly, tests in Babashka)</li>
+<li>portable LED-scoreboard
+<ul>
+<li>ESP-32 software (C++, RTOS, HUB75)</li>
+<li>iOS apps for tennis match tracking and updating the scoreboard’s software
+(React Native, ClojureScript)</li>
+</ul>
+</li>
+<li>rewriting the legacy Tennis Math server (~10k users, Clojure, tests in Erlang,
+simple analytics with Graylog)</li>
+<li>automatic deployment platform
+<ul>
+<li>deployment server (Clojure, Datomic)</li>
+<li>repository server (Clojure, PostgreSQL)</li>
+<li>custom query language for system configuration (Clojure - instaparse)</li>
+<li>command-line interface (Go)</li>
+<li>web-UI (ClojureScript/re-frame, PatternFly)</li>
+</ul>
+</li>
+<li>distributed DNS filtering system
+<ul>
+<li>master and worker servers (Erlang - mnesia)</li>
+<li>command-line management interface (Erlang)</li>
+<li>command-line tool for custom eclipse repository validation (Clojure)</li>
+</ul>
+</li>
+</ul>
+<h3>2013 - 2016</h3>
+<p><em>Software developer/Team lead/Head of development, Smilart</em></p>
+<p>Supervised the development of:</p>
+<ul>
+<li>extensible UI-box based on Raspberry PI (ClojureScript, Java)</li>
+<li>JS console for Smilart platform management and configuration</li>
+<li>Smilart platform Java API</li>
+<li>support for GenICam standard for camera configuration</li>
+</ul>
+<p>Developed myself:</p>
+<ul>
+<li>simplified usage of industrial cameras for face detection and person
+recognition with Nvidia Tegra  (Erlang, C++)</li>
+<li>integration tests for Smilart Platform API (Erlang common test)</li>
+<li>Wiegand signal interceptor based on Raspberry Pi (Erlang, C++)</li>
+<li>tracing framework for a distributed face recognition platform, tools for the
+collected data analysis (Java, Clojure)</li>
+<li>redesign of request balancing system (Java)</li>
+<li>person identification and verification management system (Java)</li>
+<li>JSON-API for a face recognition platform (Java)</li>
+<li>performance analysis and memory leaks detection (Java)</li>
+<li>JMX-based system management (Java)</li>
+<li>rewriting photos selection algorithm from C++ to Java</li>
+</ul>
+<h3>2009 - 2013</h3>
+<p><em>Software engineer, Severny Standart</em></p>
+<ul>
+<li>design and development of a taxi service backend</li>
+<li>desktop applications for economics department and project management</li>
+<li>system operation and automation</li>
+</ul>
+<h3>2008 - 2009</h3>
+<p><em>System administrator, Vologda State Technical University</em></p>
+<ul>
+<li>switching a computer class from Windows XP to Gentoo Linux</li>
+<li>participation in deployment of diskless computer cluster</li>
+<li>installation and configuration of cluster software for the physics department
+research</li>
+</ul>
+<h2>Education</h2>
+<p>Vologda State Technical University, Vologda, Electrical Engineering (Power
+Supply), 2010.</p>
+<h2>Personal</h2>
+<p>I try keeping a close eye on the latest IT news, follow blogs and podcasts. I
+also enjoy learning new programming languages and development approaches. I’m a
+happy father since 2020.</p>
