@@ -33,7 +33,7 @@ Zipkin, Nginx, React Native.
 ### Soft Skills
 
 For the first seven years, I worked in teams of 5-9 people. Most recently I
-worked single or in teams of 2-3.
+worked alone or in teams of 2-3.
 
 I use agile tools like short iterations and regular meetings when appropriate.
 
