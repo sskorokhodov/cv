@@ -9,12 +9,13 @@ backend but don’t hesitate to work with UI or low-level projects.
 
 ### Programming Languages
 
-Clojure, Erlang, Java, and C++.
+Rust, Clojure, Erlang, and C++.
 
-I also have some experience with ClojureScript, Rust, Go, Python, SQL, Bash,
-Prolog, Swift.
+I also have experience with ClojureScript, Java, Go, Python, SQL, Bash, Swift.
 
 ### Technologies and Frameworks
+
+**Rust**: tokio, hyper, async-std, rustls.
 
 **Clojure**: core.async, Datomic, ring/http-kit, re-frame.
 
@@ -25,10 +26,8 @@ ZooKeeper.
 
 **C++**: STL, WinAPI, MFC, Boost (some bits), ICU.
 
-**Rust**: async-std, rustls.
-
-**Other**: Linux, Docker, Earthly, OIDC, KeyCloak, ESP-32, Protocol Buffers,
-Zipkin, Nginx, React Native.
+**Other**: OIDC, Earthly, Docker, Linux, KeyCloak, ESP-32, Protocol Buffers,
+Open Telemetry, Nginx/Envoy, React Native.
 
 ### Soft Skills
 
@@ -48,24 +47,32 @@ applications.”
 
 _Software developer, SUPREMATIC Technology Arts GmbH_
 
-- CDN on-premise for internal software updates distribution (~70k users, Rust,
-  Earthly, tests in Babashka)
-- portable LED-scoreboard
-    - ESP-32 software (C++, RTOS, HUB75)
+- Custom CDN solution in Azure cloud. Fully automated deployment and
+  stress-testing (Rust, Bicep)
+- A family of Azure Container Apps. Fully automated deployment and integration
+  testing (Rust, Bicep, Earthly, Docker Compose, Hurl).
+    - backend for IAM needs (custom app + MS Graph API),
+    - preferences storage (custom app + managed Postgres),
+    - telemetry (Envoy + Grafana stack)
+    - file share (Envoy + Blob Storage)
+- CDN on-premise for internal software updates distribution (Rust, Earthly,
+  tests in Babashka & Docker Compose).
+- Portable LED-scoreboard:
+    - ESP-32 software (C++, RTOS, HUB75),
     - iOS apps for tennis match tracking and updating the scoreboard’s software
-      (React Native, ClojureScript)
-- rewriting the legacy Tennis Math server (~10k users, Clojure, tests in Erlang,
-  simple analytics with Graylog)
-- automatic deployment platform
-    - deployment server (Clojure, Datomic)
-    - repository server (Clojure, PostgreSQL)
-    - custom query language for system configuration (Clojure - instaparse)
-    - command-line interface (Go)
-    - web-UI (ClojureScript/re-frame, PatternFly)
-- distributed DNS filtering system
-    - master and worker servers (Erlang - mnesia)
-    - command-line management interface (Erlang)
-    - command-line tool for custom eclipse repository validation (Clojure)
+      (React Native, ClojureScript).
+- Rewriting the legacy Tennis Math server (Clojure, tests in Erlang, simple
+  analytics with Graylog).
+- Automatic deployment platform:
+    - deployment server (Clojure, Datomic),
+    - repository server (Clojure, PostgreSQL),
+    - custom query language for system configuration (Clojure - instaparse),
+    - command-line interface (Go),
+    - web-UI (ClojureScript/re-frame, PatternFly).
+- Distributed DNS filtering system:
+    - master and worker servers (Erlang - mnesia),
+    - command-line management interface (Erlang),
+    - command-line tool for custom eclipse repository validation (Clojure).
 
 ### 2013 - 2016
 
